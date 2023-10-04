@@ -8,18 +8,16 @@ const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
-// const db = knex({
-//     client: 'pg',
-//     connection: {
-//       connectionString : 'postgres://mydb_mc7e_user:qfzame2KmEX5fAw663HYTzP1KPFx3Bky@dpg-cke6n6fs0fgc73ev3nng-a/mydb_mc7e',
-//       ssl: {rejectUnauthorized: false},
-//       host : 'dpg-cke6n6fs0fgc73ev3nng-a',
-//       port : 5432,
-//       user : 'mydb_mc7e_user',
-//       password : 'qfzame2KmEX5fAw663HYTzP1KPFx3Bky',
-//       database : 'mydb_mc7e'
-//     }
-//   });
+const db = knex({
+  // connect to your own database here:
+  client: 'pg',
+  connection: {
+    host : '127.0.0.1',
+    user : 'aneagoie',
+    password : '',
+    database : 'smart-brain'
+  }
+});
   
 //   db.select('*').from('users').then(data => {console.log(data)});
 
